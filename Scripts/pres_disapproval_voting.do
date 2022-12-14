@@ -183,7 +183,7 @@ local Title "Presidential Disapproval"
 
 // Graph of marginal relationship between explanatory variable and voter turnout
 * chart notes
-linewrap, maxlength(155) name("notes") stack longstring("In this analysis, we define disapproval rates as the proportion of the weighted sample who strongly disapprove and disapprove/somewhat disapprove of the president, while excluding any respondent who has never heard/not sure or neither approve nor disapprove. Data weighted in Stata using probability weights and the weight cumulative variable. We define voter turnout based on the CCES-validated measure, such that non-voters encompass any respondent with no record of voting or no match to administrative records.")
+linewrap, maxlength(155) name("notes") stack longstring("In this analysis, we define disapproval rates as the proportion of the weighted sample who strongly disapprove and disapprove/somewhat disapprove of the president, while excluding any respondent who has never heard/not sure or neither approve nor disapprove. Data weighted in Stata using probability weights and the weight cumulative variable. We define voter turnout based on the CCES-validated measure, such that non-voters encompass any respondent with no record of voting or no match to administrative records. We include controls for college graduation status, race/ethnicity, marital status, binary gender, work status, union membership, and home ownership")
 local notes = `" "Notes: {fontface Lato:`r(notes1)'}""'
 local y = r(nlines_notes)
 forvalues i = 2/`y' {
