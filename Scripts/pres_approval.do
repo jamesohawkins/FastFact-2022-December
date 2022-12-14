@@ -14,7 +14,7 @@ replace age = 75 if age >= 75
 keep if citizen == 1
 gen approved = 1 if inlist(approval_pres, 1, 2)
 replace approved = 0 if inlist(approval_pres, 3, 4)
-drop if approved == . // JH: drop individuals who do not strongly/somewhat approve or disapprove
+drop if approved == . // drop individuals who do not strongly/somewhat approve or disapprove
 
 // Regressions
 reg approved age [pw = $weight] if year == 2006, vce(robust)
