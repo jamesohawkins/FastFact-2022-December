@@ -11,6 +11,7 @@ keep if inlist(year, 2006, 2008, 2010, 2012, 2014, 2016, 2018, 2020)
 replace age = 75 if age >= 75
 
 // Presidential approval measure
+keep if citizen == 1
 gen approved = 1 if inlist(approval_pres, 1, 2)
 replace approved = 0 if inlist(approval_pres, 3, 4)
 drop if approved == . // JH: drop individuals who do not strongly/somewhat approve or disapprove
@@ -35,7 +36,7 @@ local y2014 = `y2014' + .004
 
 // Visualization
 * chart notes
-linewrap, maxlength(155) name("notes") stack longstring("In this analysis, we define approval rates as the proportion of the weighted sample who strongly approve and aprove/somewhat approve of the president, while excluding any respondent who has never heard/not sure or neither aprove nor disapprove. Data weighted in Stata using probability weights and the weight cumulative variable.")
+linewrap, maxlength(155) name("notes") stack longstring("In this analysis, we define approval rates as the proportion of the weighted sample who strongly approve and aprove/somewhat approve of the president, while excluding any respondent who has never heard/not sure or neither approve nor disapprove. Data weighted in Stata using probability weights and the weight cumulative variable.")
 local notes = `" "Notes: {fontface Lato:`r(notes1)'}""'
 local y = r(nlines_notes)
 forvalues i = 2/`y' {
