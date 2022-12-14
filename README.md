@@ -1,4 +1,4 @@
-# [Berkeley Institute for Young Americans](https://youngamericans.berkeley.edu/) Fast Fact: 2022-December
+# [Berkeley Institute for Young Americans](https://youngamericans.berkeley.edu/) Fast Fact: 2022-December.
  
 Data: Kuriwaki, Shiro, 2022, "Cumulative CCES Common Content", [https://doi.org/10.7910/DVN/II2DB6](https://doi.org/10.7910/DVN/II2DB6), Harvard Dataverse, V7
  
