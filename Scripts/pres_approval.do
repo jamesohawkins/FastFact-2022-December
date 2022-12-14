@@ -36,7 +36,7 @@ local y2014 = `y2014' + .004
 
 // Visualization
 * chart notes
-linewrap, maxlength(155) name("notes") stack longstring("In this analysis, we define approval rates as the proportion of the weighted sample who strongly approve and aprove/somewhat approve of the president, while excluding any respondent who has never heard/not sure or neither approve nor disapprove. Data weighted in Stata using probability weights and the weight cumulative variable.")
+linewrap, maxlength(155) name("notes") stack longstring("In this analysis, we define approval rates as the proportion of the weighted sample who strongly approve and approve/somewhat approve of the president, while excluding any respondent who has never heard/not sure or neither approve nor disapprove. Data weighted in Stata using probability weights and the weight cumulative variable.")
 local notes = `" "Notes: {fontface Lato:`r(notes1)'}""'
 local y = r(nlines_notes)
 forvalues i = 2/`y' {

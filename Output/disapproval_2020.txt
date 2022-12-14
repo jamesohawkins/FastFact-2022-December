@@ -3,7 +3,7 @@
                                                      ___/   /   /___/   /   /___/    
                                                        Statistics/Data analysis      
       
-      r; t=0.00 15:54:50
+      r; t=0.00 16:19:13
       
      1 . // Model (2020): controls
      2 . svy: reg voted i.`var' i.age_bin i.`var'#i.age_bin `cov' if year == 2020
@@ -62,7 +62,7 @@
                                            Home owner  |   .0748746   .0066663    11.23   0.000     .0618087    .0879406
                                                  _cons |   .1497435   .0124715    12.01   0.000     .1252994    .1741876
       ------------------------------------------------------------------------------------------------------------------
-      r; t=1.17 15:54:51
+      r; t=0.96 16:19:14
       
      3 . margins, dydx(`var') over(age_bin) post vce(unconditional)
       
@@ -90,6 +90,6 @@
                 65+  |   .0399659   .0114727     3.48   0.000     .0174793    .0624525
       --------------------------------------------------------------------------------
       Note: dy/dx for factor levels is the discrete change from the base level.
-      r; t=6.77 15:54:58
+      r; t=6.42 16:19:21
       
      4 . translate @Results disapproval_2020.txt, replace

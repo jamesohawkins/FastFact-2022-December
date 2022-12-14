@@ -183,7 +183,7 @@ local Title "Presidential Disapproval"
 
 // Graph of marginal relationship between explanatory variable and voter turnout
 * chart notes
-linewrap, maxlength(105) name("notes") stack longstring("In this analysis, we define disapproval rates as the proportion of the weighted sample who strongly disapprove and disapprove/somewhat disapprove of the president, while excluding any respondent who has never heard/not sure or neither approve nor disapprove. Data weighted in Stata using probability weights and the weight cumulative variable. We define voter turnout based on the CCES-validated measure, such that non-voters encompass any respondent with no record of voting or no match to administrative records.")
+linewrap, maxlength(155) name("notes") stack longstring("In this analysis, we define disapproval rates as the proportion of the weighted sample who strongly disapprove and disapprove/somewhat disapprove of the president, while excluding any respondent who has never heard/not sure or neither approve nor disapprove. Data weighted in Stata using probability weights and the weight cumulative variable. We define voter turnout based on the CCES-validated measure, such that non-voters encompass any respondent with no record of voting or no match to administrative records.")
 local notes = `" "Notes: {fontface Lato:`r(notes1)'}""'
 local y = r(nlines_notes)
 forvalues i = 2/`y' {
@@ -214,8 +214,8 @@ xline(2.5, lcolor(gs5%50) lpattern(dot)) ///
 xline(3.5, lcolor(gs5%50) lpattern(dot)) ///
 levels(95) ///
 vertical ///
-title("Is `Title' Associated with Voting?", color("0 50 98") size(large) pos(11) justification(left)) ///
-subtitle("Marginal relationship (percentage points) between `title' and voter turnout", color("59 126 161") size(small) pos(11) justification(left)) ///
+title("Is `Title' Associated with Voting?", color("0 50 98") size(medium) pos(11) justification(left) margin(l-11)) ///
+subtitle("Marginal relationship (percentage points) between `title' and voter turnout", color("59 126 161") size(small) pos(11) justification(left) margin(l-11)) ///
 yline(0, lcolor(gs10) lwidth(thin) lpattern(dash)) ///
 xtitle("Age Group", color(gs6)) ///
 xscale(lstyle(none)) ///
@@ -224,7 +224,7 @@ yscale(lstyle(none)) ///
 ylabel(-.10 "-10 ppt" -.05 "-5 ppt" 0 "0 ppt" .05 "+5 ppt" .10 "+10 ppt" .15 "+15 ppt", gmax gmin glcolor(gs9%15) glpattern(solid) labcolor(gs6) labsize(2.5) tlength(0) tlcolor(gs9%15)) ///
 legend(off) ///
 note("Source: {fontface Lato:Authors' analysis of Cumulative CCES Common Content, Harvard Dataverse, V7.}" "Sample: {fontface Lato:All citizens 18 years or older.}" ///
-		`notes', margin(l+1.5) color(gs7) span size(vsmall) position(7)) ///
+		`notes', color(gs7) span size(tiny) position(7)) ///
 text(.002 .5 "Statistically Insignificant Relationship", color(gs10) size(vsmall) orientation(horizontal) place(ne) justification(left)) ///
 text(`label1' 1.25 "Trump", color("0 165 152") size(vsmall) orientation(vertical) place(nw) justification(left)) ///
 text(`label1' 1.325 "2020", color("0 165 152") size(vsmall) orientation(vertical) place(nw) justification(left)) ///
