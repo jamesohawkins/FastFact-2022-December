@@ -179,7 +179,7 @@ mat D = e(b)
 
 // Graph titles
 local title "presidential disapproval"
-local Title "Presidential Disapproval"
+local Title "presidential disapproval"
 
 // Graph of marginal relationship between explanatory variable and voter turnout
 * chart notes
@@ -214,7 +214,7 @@ xline(2.5, lcolor(gs5%50) lpattern(dot)) ///
 xline(3.5, lcolor(gs5%50) lpattern(dot)) ///
 levels(95) ///
 vertical ///
-title("Is `Title' Associated with Voting?", color("0 50 98") size(medium) pos(11) justification(left) margin(l-11)) ///
+title("Is `Title' associated with voting?", color("0 50 98") size(medium) pos(11) justification(left) margin(l-11)) ///
 subtitle("Marginal relationship (percentage points) between `title' and voter turnout", color("59 126 161") size(small) pos(11) justification(left) margin(l-11)) ///
 yline(0, lcolor(gs10) lwidth(thin) lpattern(dash)) ///
 xtitle("Age Group", color(gs6)) ///
